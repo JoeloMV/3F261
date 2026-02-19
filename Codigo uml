@@ -1,0 +1,29 @@
+@startuml
+class Steve
+class Esqueleto
+class Zombie
+class Creeper
+class Araña
+class Pico
+class Espada
+class Hacha
+class Madera
+class Tierra
+class Piedra
+class Personaje
+class Objeto
+class Herramienta 
+
+Steve *-- Personaje
+Zombie *-- Mounstruo
+Esqueleto *-- Mounstruo
+Araña *-- Mounstruo
+Creeper *-- Mounstruo
+Tierra *-- Objeto
+Piedra *-- Objeto
+Madera *-- Objeto
+Espada *-- Herramienta
+Pico *-- Herramienta
+Hacha *-- Herramienta
+
+@enduml
