@@ -1,0 +1,87 @@
+@startuml
+
+class Steve{
++ Agarrar(Item)
+}
+
+class Personaje
+class Animal{
+- Vida
++ Morir
+}
+class Cubo{
+- Item Contenido
++ Item : Romper()
+}
+class Vida
+class Mounstruo{
+- Vida
++ Morir
+}
+class Item{
+
+}
+class Herramienta
+
+class Esqueleto
+class Zombie
+class Creeper
+class Araña
+
+class Pico
+class Espada
+class Hacha
+
+class Madera
+class Tierra
+class Piedra
+
+class Diamante 
+class Carbon
+class Esmeralda
+class Redstone
+class Hierro
+
+class Pollo
+class Vaca
+class Cerdo
+class Lobo
+class Obeja
+class Abeja
+class Gato
+
+
+Steve --|> Personaje
+Zombie --|> Mounstruo
+Esqueleto --|> Mounstruo
+Araña --|> Mounstruo
+Creeper --|> Mounstruo
+Tierra --|> Cubo
+Piedra --|> Cubo
+Madera --|> Cubo
+Espada --|> Herramienta
+Pico --|> Herramienta
+Hacha --|> Herramienta
+Redstone --|> Cubo
+Diamante --|> Cubo
+Hierro --|> Cubo
+Carbon --|> Cubo
+Esmeralda --|> Cubo
+Pollo --|> Animal
+Vaca --|> Animal
+Cerdo --|> Animal
+Lobo --|> Animal
+Obeja --|> Animal
+Abeja --|> Animal
+Gato --|> Animal
+Cubo --|> Item
+Herramienta --|> Item
+
+Steve "1" o-- "*" Cubo
+Steve "1" o-- "*" Herramienta
+Steve "1" o-- "*" Animal
+Steve "1" o-- "*" Mounstruo
+
+Steve *-- Vida
+
+@enduml
