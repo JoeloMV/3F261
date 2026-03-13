@@ -1,27 +1,34 @@
 @startuml
 
 class Steve{
+- Vida vida
 + Agarrar(Item)
 }
 
-class Personaje
 class Animal{
-- Vida
-+ Morir
+- Vida vida
++ Morir() : Item
 }
+
 class Cubo{
 - Item Contenido
-+ Item : Romper()
++ Romper() : Item
 }
-class Vida
-class Mounstruo{
-- Vida
-+ Morir
-}
-class Item{
 
+class Mounstruo{
+- Vida vida
++ Morir() : Item
 }
-class Herramienta
+
+class Herramienta{
+-Utilidad utilidad
++ Atacar()
+}
+
+class Item
+class Usuario
+class Vida
+class Utilidad
 
 class Esqueleto
 class Zombie
@@ -50,8 +57,13 @@ class Obeja
 class Abeja
 class Gato
 
+class Comida{
++ Comer()
+}
+class Chuleta
+class Patata
+class Manzana
 
-Steve --|> Personaje
 Zombie --|> Mounstruo
 Esqueleto --|> Mounstruo
 Araña --|> Mounstruo
@@ -74,14 +86,24 @@ Lobo --|> Animal
 Obeja --|> Animal
 Abeja --|> Animal
 Gato --|> Animal
-Cubo --|> Item
 Herramienta --|> Item
+Chuleta --|> Comida
+Manzana --|> Comida
+Patata --|> Comida
+Comida --|> Item
 
 Steve "1" o-- "*" Cubo
 Steve "1" o-- "*" Herramienta
 Steve "1" o-- "*" Animal
 Steve "1" o-- "*" Mounstruo
+Usuario o-- Steve
 
 Steve *-- Vida
+Animal *-- Vida
+Animal *-- Item
+Mounstruo *-- Vida
+Mounstruo *-- Item
+Cubo *-- Item
+Herramienta *-- Utilidad
 
 @enduml
